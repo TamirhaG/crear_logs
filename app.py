@@ -5,11 +5,11 @@ st.title("Sistema de Logging en Streamlit")
 
 data_input = st.text_input("Ingrese un valor:")
 
-type_of_log = st.selectbox("Seleccione el tipo de log a generar", ["Actividad", "Advertencia", "Error"])
+type_of_log = st.selectbox("Seleccione el tipo de log a generar", ["Actividad", "Advertencia","Error"])
 
 if st.button("Generar Log"):
     if type_of_log == "Actividad":
-        activity_logger.info(f"Usuario Ingreso: {data_input}")
+        activity_logger.info(f"Usuario Ingresó: {data_input}")
         st.success("Log de actividad Generado")
     elif type_of_log == "Advertencia":
         warning_logger.warning(f"Posible problema con el dato: {data_input}")
